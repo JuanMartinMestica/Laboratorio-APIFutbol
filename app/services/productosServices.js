@@ -103,11 +103,11 @@ const agregarCamiseta = async (nuevaCamiseta) => {
 
 const obtenerResumen = async () => {
 
-  const result = await db.query("SELECT tipo, COUNT(*) as cantidad FROM producto GROUP BY tipo")
+  const result = await db.query("SELECT continente, COUNT(*) as cantidad FROM producto GROUP BY continente")
 
-  const resultTotal = await db.query("SELECT COUNT(*) as cantidad_total FROM producto");
+  const resultTotal = await db.query("SELECT COUNT(*) as cantidad  FROM producto");
 
-  resultTotal.rows[0].tipo = "Total"
+  resultTotal.rows[0].continente = "Total"
 
   result.rows.push(resultTotal.rows[0]);
 

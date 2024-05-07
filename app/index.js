@@ -4,9 +4,7 @@ const cors = require("cors");
 require('./database');
 
 //IMPORT Routers
-const productosRouter = require('./routes/productosRouter')
-const listaRouter = require('./routes/listaRouter')
-
+const productosRouter = require('./routes/productosRouter')   
 
 const app = express()
 
